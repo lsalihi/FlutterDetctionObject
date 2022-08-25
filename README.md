@@ -14,3 +14,19 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## Fix ':tflite'  No signature of method .android() is applicable for argument types
+Update android/build.gradle  : use  com.android.tools.build:gradle:4.1.0
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        ...
+    }
+
+Update android/app/build.gradle => set minSdkVersion to 19
+    defaultConfig {
+        ...
+        minSdkVersion 19
+        ...
+    }
+
